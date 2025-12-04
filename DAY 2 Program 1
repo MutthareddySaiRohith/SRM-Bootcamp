@@ -1,5 +1,5 @@
-Day 
-Program 1
+DAY 2
+PROGRAM 1
 Check Palindrome
 
 public class Main
@@ -27,3 +27,8 @@ public class Main
         }
     }
 }
+
+
+
+
+
