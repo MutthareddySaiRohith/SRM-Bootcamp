@@ -1,0 +1,18 @@
+DAY 2
+PROGRAM 5
+Recursion
+
+public class Main
+{
+    public static int countBinaryString(int n)
+{
+    if (n == 0) return 0;
+    if (n == 1) return 2;
+    if (n == 2) return 3;
+    return countBinaryString (n - 1) + countBinaryString (n - 2);
+}
+   public static void main(String[] args) {
+       int n = 6;
+       System.out.println("Number of Binary String of length " + n + " with no consecutive ones's: " + countBinaryString(n));
+   }
+}
