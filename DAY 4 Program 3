@@ -1,0 +1,23 @@
+DAY 4
+PROGRAM 3
+FIBINACCI SERIES(DYNAMIC PROGRAMMING)
+
+import java.util.*;
+public class Main{
+    public static int fibRecursive(int n, int[] dp){
+        if(n<=1) return n;
+        
+        if(dp[n] != -1) return dp[n];
+        return dp[n] = fibRecursive(n - 1, dp) + fibRecursive(n - 2, dp);
+    }
+    
+    public static void main(String[] args){
+        int n = 10;
+        int[] dp = new int[n + 1];
+        Arrays.fill(dp, -1);
+        
+        for(int i = 0; i < n; i++){
+            System.out.print(fibRecursive(i, dp) + " ");
+        }
+    }
+}
