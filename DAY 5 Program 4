@@ -1,0 +1,21 @@
+DAY 5
+PROGRAM 4
+Kth Largest Element in a Array(HEAP)
+
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+
+        int n = nums.length;
+        PriorityQueue<Integer> minh = new PriorityQueue<>();
+
+        for (int i = 0; i < n; i++) {
+            minh.add(nums[i]);
+            if (minh.size() > k) {
+                minh.remove();  
+// eliminating the smallest data present in the heap
+            }
+        }
+
+        return minh.peek();
+    }
+}
