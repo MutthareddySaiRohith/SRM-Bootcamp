@@ -1,0 +1,30 @@
+DAY 5
+PROGRAM 1
+Valid Parnthesis(STACK)
+
+import java.util.Stack;
+
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for(char c : s.toCharArray()) {
+
+            //push expected closing bracket
+            if(c == '(') {
+                stack.push(')');
+            } else if(c == '{') {
+                stack.push('}');
+            } else if(c == '[') {
+                stack.push(']');
+            }else {
+                //closing bracket case
+                if(stack.isEmpty() || stack.pop()!=c) {
+                    return false;
+                }
+            }
+        } 
+
+        return stack.isEmpty();
+    }
+}
